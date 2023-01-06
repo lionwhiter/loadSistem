@@ -1,0 +1,49 @@
+@media (max-width:760px) {
+
+    #app {
+        margin-top: 2rem;
+    }   
+    main {
+        padding: 1rem;
+    }
+
+    footer{
+        max-height: 10rem;
+        padding: 2rem !important;
+    }
+    footer strong{
+        font-size: 1rem !important;
+    }
+
+    .img-carga{
+        width: 20%;
+        margin-left: 40%;
+
+    }
+}
+
+@media(max-width: 720px){
+
+    .input-group-text {
+        color: var(--fondoColor);
+        background-color: var(--primaryAmarrillo) !important;
+        font-weight: initial !important;
+        padding: .5rem 0.2rem  !important;
+    }
+
+    .img-carg{
+        margin-left: 40% !important;
+        width: 20% !important;
+    }
+
+    .logoUtakata{
+        width: 50% !important;
+    }
+
+    .contentDesctiption{
+        flex-direction: column !important;
+        font-weight: 300 !important;
+    }
+
+
+}

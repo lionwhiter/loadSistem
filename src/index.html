@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ControlCarga/ Vehículo</title>
+    <script type="module" src="./js/main.js"></script>
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+  </head>
+  <body class="">
+      <header class="container-fluid py-3 mb-3 border-bottom">
+        <div class=" d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+        
+          <div class="dropdown">
+            <a href="#" class=" d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle" id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/logo.png"  class="logo" alt="Logo Aplicación">
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink">
+              <li><a class="dropdown-item active" href="#" aria-current="page">Nosotros </a></li>
+              <li><a class="dropdown-item" href="#">Gestion de Cargas </a></li>
+              <li><a class="dropdown-item" href="#">Clientes</a></li>
+              <li><a class="dropdown-item" href="#">Productos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Reportes</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Análisis de Carga</a></li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <span class="w-100 p-4">
+              <img src="/startprograming.svg" class="logoUtakata" alt="" srcset="">
+            </span>
+
+            <div class="flex-shrink-0 dropdown">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">Lista de Carga</a></li>
+                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Iniciar sección</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="container-fluid pb-3 mt-4 ">
+
+        <main class="row justify-content-around mt-4">
+          <div class="col-md-6 col-lg-7 col-12 bg-light border rounded-3  pt-4 p-4">
+            <h1 class=""> 
+              <i class="fa fa-tasks textColorPrimary " aria-hidden="true"></i>
+              CARGA DE GENERAL DEL PRODUCTO 
+              <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Instrucciones de Extensiones  " data-bs-content="Para extender la funcionalidad debe registrase">Extender Funciones.</button>
+            </h1>
+            <!-- muestra del contenido cargado  -->
+            <div class=" px-0" id= "cargas" >
+              <p class="fs-4">Realiza la configuración inicial para tener un mayor control  de carga sobre tu Vehículo </p>
+              <p>Indica si tu carga tendrá, el uso de Cesta, tara o valor de merma Final.</p>
+              <span class="px-3 cargas">
+              <!-- init de los input para configuracion -->
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="predeterminado" checked name = "configuracionCarga" data-action ="configuracionCarga"  value="autoGestion" >
+                  <label class="form-check-label" for="flexSwitchCheckChecked">
+                    Valores Automáticos
+                    <button type="button" class="btn btn-primary rounded-circle  ayudad" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="al finalizar el dato ">
+                      ?
+                    </button>
+                  </label>
+                </div>
+
+                <div class="form-check form-switch mt-2">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name = "configuracionCarga" data-action ="configuracionCarga" value= "sinTara">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Sin Petición de Tara</label>
+                  <span  class="btn btn-primary rounded-circle ayudad " data-bs-toggle="popover" title="Configuración Libre Tara" data-bs-content="Se retira las retenciones de para el Peso tara  (Que es tara: 'Peso a restar de la Carga') ">?</span>
+                </div>
+                
+                <div class="form-check form-switch mt-2">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name = "configuracionCarga" data-action ="configuracionCarga" value= "sinCesta">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Sin cestas</label>
+                  <span  class="btn btn-primary rounded-circle ayudad " data-bs-toggle="popover" title="Configuración Libre Cesta " data-bs-content="Se retira las retenciones de para el Peso Cestas  (Que son las Cesta: 'Son por lo general los elementos de carga individual de un PRODUCTO') ">?</span>
+                </div>
+                <div class="form-check form-switch mt-2">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name = "configuracionCarga" data-action ="configuracionCarga" value="gestionCarga">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Sin Gestión de Carga</label>
+                  <span  class="btn btn-primary rounded-circle ayudad " data-bs-toggle="popover" title="Configuración Libre Gestión de Pesos " data-bs-content="Al seleccionar esta esta opción se retira la posibilidad de controlar la carga al inhabilitar el botón de peso general  ">?</span>
+                </div>
+
+                <div class="form-check form-switch mt-2">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name = "configuracionCarga" data-action ="configuracionCarga" value="gestionPromedio">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Sin gestión de promedio </label>
+                  <span  class="btn btn-primary rounded-circle ayudad " data-bs-toggle="popover" title="Configuración Libre Promedio" data-bs-content=" inhabilitar el botón de Promedio ">?</span>
+                </div>
+                <!-- init de los input para configuracion -->
+              </span>
+
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-4 col-12 bg-light bg-gradient border rounded-3  pt-4 p-4" id="app">
+            <h2>Guides</h2>
+            <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+            <ul class="icon-list">
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap quick start guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/webpack/">Bootstrap Webpack guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/parcel/">Bootstrap Parcel guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/vite/">Bootstrap Vite guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/build-tools/">Contributing to Bootstrap</a></li>
+            </ul>
+          </div>
+          <div class="col-12 ">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Histórico de Carga</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <hr class="col-1 my-5 mx-0">
+                <div>
+                  Histórico de Carga y devanes 
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Iniciar Sección
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Registro</a></li>
+                    <li><a class="dropdown-item" href="#">Inicio </a></li>
+                    <li><a class="dropdown-item" href="#"></a></li>
+                  </ul>
+                </div>
+                <hr class="mt-5 mb-4">
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+      <footer class="container-fluid  text-center  p-5 mt-4 ">
+        <div class="row d-flex justify-content-center">
+          <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <span>
+              <img src="/startprograming.svg" class="logoUtakataFooter" alt="" srcset="">
+            </span>
+            <p class="text-muted fw-light">Creado por <a href="www.utakata.tk"> <strong class="text-small">  Utakata.TK  </strong> </a>Todos los Derechos Reservados Creada : <strong>2022@2023</strong>.</p>
+          </div>
+          <!-- notificaciones de Bienvenida-->
+          <span class="position-fixed" id= "alertContent">  
+            <div aria-live="polite" aria-atomic="true" class="position-relative">
+              <!-- Position it: -->
+              <!-- - `.toast-container` for spacing between toasts -->
+              <!-- - `.position-absolute`, `top-0` & `end-0` to position the toasts in the upper right corner -->
+              <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
+              <div class="toast-container position-absolute top-0 end-0 p-3">
+                <!-- Then put toasts within -->
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <img src="/favicon.png" class="rounded me-2" alt="Gestión Empresa" width="30px">
+                    <strong class="me-auto">Licencias</strong>
+                    <small class="text-muted">Obtén Tu licencia </small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body text-dark">
+                    para Extender Funciones adquiere, tu licencia Registrándote  
+                  </div>
+                </div>
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <img src="/favicon.png" class="rounded me-2" alt="Gestión Empresa" width="30px">
+                    <strong class="me-auto">Bienvenido </strong>
+                    <small class="text-muted">Carga / Vehiculo </small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body text-dark">
+                    Sistema de Análisis de carga, revision y gestion  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </span> 
+        </div> 
+      
+      </footer>
+  </body>
+</html>
