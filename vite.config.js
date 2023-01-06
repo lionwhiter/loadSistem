@@ -1,3 +1,6 @@
+// vite.config.js
+import { ghPages } from "vite-plugin-gh-pages";
+
 const path = require("path");
 
 export default {
@@ -15,4 +18,6 @@ export default {
         port: 5173,
         //hot: true,
     },
+    base: "/LoadSystem/",
+    plugins: [ghPages()],
 };
