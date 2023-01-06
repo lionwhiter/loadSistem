@@ -9,7 +9,6 @@ npm run build
 # navigate into the build output directory
 cd dist
 
-
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
 
@@ -17,7 +16,7 @@ echo > .nojekyll
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -b main
+git checkout -B main
 git add -A
 git commit -m 'deploy'
 
@@ -26,6 +25,5 @@ git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:lionwhiter/LoadSystem.git main:gh-pages
-
 
 cd -
