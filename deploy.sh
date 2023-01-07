@@ -9,6 +9,8 @@ npm run build
 # navigate into the build output directory
 cd dist
 
+# coloca .nojekyll para forzar el procesamiento de Jekyll
+echo > .nojekyll
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
