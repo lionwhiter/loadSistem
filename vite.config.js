@@ -1,5 +1,5 @@
 // vite.config.js
-import { ghPages } from "vite-plugin-gh-pages";
+// import { ghPages } from "vite-plugin-gh-pages";
 
 const path = require("path");
 
@@ -19,5 +19,4 @@ export default {
         //hot: true,
     },
     base: "/LoadSystem/",
-    plugins: [ghPages()],
 };
