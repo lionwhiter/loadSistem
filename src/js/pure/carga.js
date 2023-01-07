@@ -41,8 +41,11 @@ function validad(dat) {
         error = "";
     // console.log(dta);
     console.log(data);
+    console.log(parseInt(data.pesoNeto.value))
+    console.log(typeof data.pesoNeto.value)
+
     //requerimiento de ejecución
-    if (parseInt(data.pesoNeto.value) > parseInt(data.pesoGeneral.value)) {
+    if ((data.pesoGeneral.value.length >= 0 || data.pesoGeneral.requery == 1) && parseInt(data.pesoNeto.value) > parseInt(data.pesoGeneral.value)) {
         todoCorrecto = false;
         error += ` Error "Peso Neto" no debe ser mayor a Peso General. `;
     } else {

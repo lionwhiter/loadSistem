@@ -15,7 +15,7 @@ export default {
         },
     },
     server: {
-        port: 5173,
+        // port: 5173,
         //hot: true,
     },
     base: "/LoadSystem/",

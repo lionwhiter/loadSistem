@@ -1,5 +1,5 @@
 //configuracion Basica de pre_configuracion de elementos
-var  ElementApp = `
+var ElementApp = `
 
     <h4 class="fs-1 mb-4 textColorFondo fw-light"> 
         <i class="fa fa-truck textColorPrimary" aria-hidden="true"></i>
@@ -170,15 +170,18 @@ var  ElementApp = `
         },
         gestionCarga: {
             action(op = true) {
-                if (op)
+                if (op){
                     $DOM.querySelector("#pesoGeneral").setAttribute(
                         "disabled",
                         "disabled",
                     );
-                else
+                    data.pesoGeneral.requery = 1;
+                }else {
                     $DOM.querySelector("#pesoGeneral").removeAttribute(
                         "disabled",
                     );
+                    data.pesoGeneral.requery = 0;
+                }
             },
             actionExec: false,
         },
@@ -230,11 +233,11 @@ var  ElementApp = `
             value: "",
             requery: "",
             valuePromedio: 0,
-            opPromedio: true
-        }
+            opPromedio: true,
+        },
     },
     PORCENTAJE = 100,
     //Carga de Funcionalidades
     $DOM = document.querySelector("body");
-    
-export {data,$DOM, configLoadVehiculo, PORCENTAJE, ElementApp};
+
+export { data, $DOM, configLoadVehiculo, PORCENTAJE, ElementApp };
