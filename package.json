@@ -1,5 +1,5 @@
 {
-  "name": "LoadSystem-",
+  "name": "loadSistem",
   "version": "0.1.0",
   "description": "Sistema de gestion de Carga, ayudad a los calculos a realizar para llevar una carga optima de Vehiculos Pesados",
   "main": "index.js",

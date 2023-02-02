@@ -4,6 +4,7 @@
 /dist-ssr
 *.local
 desploy.sh
+src/dist
 
 # Logs
 logs
