@@ -2,9 +2,9 @@
 /node_modules
 /dist
 /dist-ssr
+src/dist
 *.local
 desploy.sh
-src/dist
 
 # Logs
 logs

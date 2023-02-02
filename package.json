@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview --port 8080",
     "test": "vite optimize --force",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d src/dist"
   },
   "keywords": [
     "gestion",
