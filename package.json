@@ -1,14 +1,13 @@
 {
   "name": "loadSistem",
   "version": "0.1.0",
-  "description": "Sistema de gestion de Carga, ayudad a los calculos a realizar para llevar una carga optima de Vehiculos Pesados",
+  "description": "Sistema de gestion de Carga, ayudad a los calculos a realizar para llevar una carga optima de Vehiculos Pesados, permitiendo tener mejor gestion en todos los productos del vehiculo ",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 8080",
-    "test": "vite optimize --force",
-    "deploy": "gh-pages -d src/dist"
+    "preview": "vite preview --port 5050",
+    "test": "vite optimize --force"
   },
   "keywords": [
     "gestion",
@@ -18,7 +17,6 @@
   "author": "Alonso Blanco",
   "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "sass": "^1.57.1",
     "vite": "^4.0.4"
   },
